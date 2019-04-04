@@ -1,7 +1,7 @@
 # 毒 app
 https://m.poizon.com/ 
 
-毒 app 列表页 sign 签名 js 解密的 python 复写版本
+毒 app sign 签名 js 解密的 python 复写版本
 
 复写的原因:
     使用 js 执行速度较慢, 依赖 node 环境; 因此对于简单的加密可以尝试复写
