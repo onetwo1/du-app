@@ -1,6 +1,25 @@
 # 毒 app
 https://m.poizon.com/ 
 
+
+## 2019-9-8 更新
+
+💫最近在学习签名加密算法之类的东西, 发现这里的加密具有明显的 md5 特征, 因此尝试了一下直接用 md5 进行加密, 发现是正确的..... 代码如下 👇
+
+```python 
+
+si = get_sign_string({"recommendId": "73", "lastId": ""})
+# sign = func(si)
+import hashlib
+m = hashlib.md5()
+m.update(si.encode("utf8"))
+sign = m.hexdigest()
+print(sign)
+res = requests.get(url.format(sign))
+print(res.text)
+
+```
+
 毒 app sign 签名 js 解密的 python 复写版本
 
 复写的原因:
